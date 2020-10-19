@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+body {
+  background-image: url("/img/webdesign_1.jpg");
+  background-repeat: no-repeat;
+  font-family: "Spartan", sans-serif;
+  background-size: cover;
+  color: #808080;
+}
+.overlay {
+  height: auto;
+  z-index: -1;
+  position: absolute;
+  top: -70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+nav {
+  padding: 0 !important;
+  z-index: 1;
+}
+nav .navbar-brand {
+  margin-left: 20px;
+}
+
+.navbar-brand h3 {
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.global-container {
+  margin: 150px auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+form {
+  padding-top: 10px;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.card-title {
+  font-weight: 300;
+}
+
+.btn {
+  font-size: 14px;
+  margin-top: 20px;
+  background-color: #527d8f;
+}
+
+.login-form {
+  width: 330px;
+  margin: 20px;
+}
+
+.material-textfield {
+  position: relative;
+}
+.username {
+  margin-left: 10px;
+}
+.password {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+label {
+  position: absolute;
+  font-size: 1rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: gray;
+  padding: 0 0.3rem;
+  margin: 0 0.5rem;
+  transition: 0.1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+}
+input {
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 1rem 0.7rem;
+  color: gray;
+  transition: 0.1s ease-out;
+}
+input:focus {
+  border-color: #527d8f;
+}
+input:focus + label {
+  color: #527d8f;
+  top: 0;
+  transform: translateY(-50%) scale(0.9);
+}
+input:not(:placeholder-shown) + label {
+  top: 0;
+  transform: translateY(-50%) scale(0.9);
+}
+.sign-up {
+  margin-top: 15px;
+}
