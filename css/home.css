@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+body {
+  font-family: "Spartan", sans-serif;
+  color: #808080;
+  text-align: center;
+}
+nav {
+  padding: 0 !important;
+}
+nav .navbar-brand {
+  margin-left: 20px;
+}
+
+.navbar-brand h3 {
+  margin-left: 10px;
+  font-weight: 700;
+}
+nav .placeholder_user {
+  margin-right: 10px;
+}
+
+.card {
+  transition: all 0.2s ease-in-out;
+  border: 1px solid #527d8f;
+}
+.card:hover {
+  box-shadow: 5px 5px grey;
+}
+.btn {
+  font-size: 14px;
+  margin-top: 20px;
+  background-color: #527d8f;
+  color: white;
+}
+#item_cards {
+  margin: auto 100px !important;
+}
+footer {
+  padding: 20px;
+  margin-top: 50px;
+  background-color: #778899;
+  color: white;
+  height: 200px;
+}
+.footer_info {
+  margin-left: 20px;
+  font-weight: 700;
+}
+.links {
+  margin-left: 45px;
+  font-weight: 700;
+  text-align: start;
+}
+
+.social .social:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+.social .social {
+  -webkit-transform: scale(0.8);
+  /* Browser Variations: */
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+}
+/*
+      Multicoloured Hover Variations
+  */
+
+.social a {
+  color: white;
+}
+.social #social-fb:hover {
+  color: #3b5998;
+}
+
+.social #social-tw:hover {
+  color: #4099ff;
+}
+
+.social #social-gp:hover {
+  color: #d34836;
+}
+
+.social #social-em:hover {
+  color: #f39c12;
+}
