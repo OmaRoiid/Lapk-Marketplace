@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+body {
+  font-family: "Spartan", sans-serif;
+}
+
+nav .navbar-brand {
+  margin-left: 20px;
+}
+
+.navbar-brand h3 {
+  margin-left: 10px;
+  font-weight: 700;
+}
+nav .placeholder_user {
+  margin-right: 20px;
+}
+.mycart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
+}
+.mycart:hover {
+  cursor: pointer;
+}
+.mycart i {
+  text-align: center;
+}
+.mycart label {
+  font-size: 15px;
+}
+h2 {
+  margin: 10px 10px;
+}
+.detail__model--name {
+  margin: 10px 5px;
+}
+.detail__model--name p {
+  width: 75%;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.detail__model--name label {
+  color: lightseagreen;
+}
+.detail__model--img img {
+  width: 80%;
+}
+.detail__info ul {
+  border: 2px solid #527d8f;
+  margin-right: 10px;
+}
+.detail__info ul li {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.btn {
+  padding: 1.18rem;
+  border-width: 0;
+  border-radius: 3px;
+  width: 15rem;
+}
+.alert {
+  display: none;
+}

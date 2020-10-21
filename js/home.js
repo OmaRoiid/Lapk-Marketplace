@@ -1,7 +1,7 @@
-//change username using  js  from local storage
+
+const searchInput=document.getElementById("searchBtn");
+//set username using  js  from local storage
 $(".placeholder_user p").text("Hello "+localStorage.getItem("usernameKey"));
-
-
 $.ajax({
     method: "GET",
     url: "/js/fakeApi.txt",
@@ -20,12 +20,25 @@ $.ajax({
         <div class="card-body text-center">
           <h5 class="card-title" style="font-size: 1rem;">${resArr[i].modelName}</h5>
           <p class="card-text text-left" style="font-size: 0.7rem;">${resArr[i].Desc}</p>
-          <button id="more" type="submit" class="btn  btn-block">More</button>
+          <button id="more" type="submit" onclick="showLaptopDetails(${i})"  class="btn  btn-block">More</button>
         </div>
       </div>
           `;
       }
       $("#item_cards").append(content)
     },
+  });
+  //to detail screen
+  function showLaptopDetails(details){
+    localStorage.setItem("lapTopNum", details);
+     open("/html/detail.html")
+     console.log(details)
+  }
+  //search 
+  $('#searchBtn').on("keyup", function() {
+    var searchBtnValue = $(this).val().toLowerCase();
+    $(".card").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(searchBtnValue) > -1) 
+    });
   });
   
