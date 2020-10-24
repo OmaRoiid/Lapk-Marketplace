@@ -1,7 +1,7 @@
 
 const searchInput=document.getElementById("searchBtn");
 //set username using  js  from local storage
-$(".placeholder_user p").text("Hello "+localStorage.getItem("usernameKey"));
+$(".placeholder_user ").text("Hello "+localStorage.getItem("usernameKey"));
 $.ajax({
     method: "GET",
     url: "/js/fakeApi.txt",

@@ -1,6 +1,5 @@
 let numberOfLap=localStorage.getItem("lapTopNum");//use the  index as an id to get data 
 let mCLickedLap;
-let prodacts=[];
 $.ajax({
     method: "GET",
     url: "/js/fakeApi.txt",
@@ -23,8 +22,12 @@ $.ajax({
  
 //add to cart 
 $("#add").on("click",function(){
-  prodacts.push(mCLickedLap)
- localStorage.setItem("cardItems",JSON.stringify(prodacts))
+ 
+ var existingEntries = JSON.parse(localStorage.getItem("allEntries"));
+ if(existingEntries == null) existingEntries = [];
+ localStorage.setItem("entry", JSON.stringify(mCLickedLap));
+ existingEntries.push(mCLickedLap);
+ localStorage.setItem("allEntries", JSON.stringify(existingEntries));
 })
 //show alert
 $('button').click(function(){

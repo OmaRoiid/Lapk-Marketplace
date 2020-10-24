@@ -4,19 +4,11 @@ body {
   color: #808080;
   text-align: center;
 }
-nav {
-  padding: 0 !important;
+.navbar {
+  padding: 8px !important;
 }
-nav .navbar-brand {
+.navbar img {
   margin-left: 20px;
-}
-
-.navbar-brand h3 {
-  margin-left: 10px;
-  font-weight: 700;
-}
-nav .placeholder_user {
-  margin-right: 20px;
 }
 
 .card {

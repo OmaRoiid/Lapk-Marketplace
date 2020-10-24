@@ -8,19 +8,11 @@ body {
   color: #808080;
   font-weight: 700;
 }
-nav {
-  padding: 0 !important;
+.navbar {
+  padding: 8px !important;
 }
-nav .navbar-brand {
+.navbar img {
   margin-left: 20px;
-}
-
-.navbar-brand h3 {
-  margin-left: 10px;
-  font-weight: 700;
-}
-nav .placeholder_user {
-  margin-right: 20px;
 }
 .order_h2 {
   margin-left: 10px;

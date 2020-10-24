@@ -1,12 +1,16 @@
 //set user name
 $(".placeholder_user p").text("Hello "+localStorage.getItem("usernameKey"));
 //get all prodacts
-let userOrder=localStorage.getItem("cardItems")
+let userOrder=localStorage.getItem("allEntries")
 const tbody = document.getElementById("tbody");
 prodcats=JSON.parse(userOrder)
 console.log(prodcats);
     let content = "";
     let cost=0;
+    if(prodcats==null){
+      tbody.innerHTML =  `<h3> You don't have Items to buy<h3>`;
+      $('button').attr('disabled','disabled');
+    }
     for (let i = 0; i < prodcats.length; i++) {
       content += `
 			<tr>

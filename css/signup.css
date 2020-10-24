@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+html {
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
 body {
-  background-image: url("/img/webdesign_1.jpg");
+  background-image: url("/img/backgroun_img.jpg");
   background-repeat: no-repeat;
   font-family: "Spartan", sans-serif;
   background-size: cover;

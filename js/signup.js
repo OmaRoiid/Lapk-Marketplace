@@ -15,10 +15,10 @@ else if(newUserNamePassword!=rePassword){
 
 }
 else{
-    localStorage.setItem("usernameKey", newUserName);
-    localStorage.setItem("newUserNamePasswordKey", newUserNamePassword);
+    localStorage.setItem("username", newUserName);
+    localStorage.setItem("newUserNamePassword", newUserNamePassword);
     //routing to home screen
-    open("html/homepage.html")
+    open("./homepage.html")
 }
 
 }
