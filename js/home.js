@@ -1,7 +1,7 @@
 
 const searchInput=document.getElementById("searchBtn");
 //set username using  js  from local storage
-$(".placeholder_user ").text("Hello "+localStorage.getItem("usernameKey"));
+$("#placeholder_user ").text("Hello "+localStorage.getItem("username"));
 $.ajax({
     method: "GET",
     url: "/js/fakeApi.txt",
@@ -31,7 +31,7 @@ $.ajax({
   //to detail screen
   function showLaptopDetails(details){
     localStorage.setItem("lapTopNum", details);
-     open("/html/detail.html")
+     window.location.href = '/html/detail.html'
      console.log(details)
   }
   //search 

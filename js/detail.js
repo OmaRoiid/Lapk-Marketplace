@@ -34,5 +34,5 @@ $('button').click(function(){
   $('.alert').show()
 }) 
 $(".mycart").on("click",function(){
-open("/html/mycart.html")
+window.location.href = '/html/mycart.html'
 })
