@@ -1,4 +1,5 @@
 let numberOfLap=localStorage.getItem("lapTopNum");//use the  index as an id to get data 
+let mCurentuserName=localStorage.getItem("username");
 let mCLickedLap;
 $.ajax({
     method: "GET",
@@ -16,7 +17,6 @@ $.ajax({
      $(".detail__info ul li:nth-child(2)").text(`Type : ${mCLickedLap.type}`)
      $(".detail__info ul li:nth-child(3)").text(`Price : ${mCLickedLap.price}`)
      $(".detail__info ul li:nth-child(4)").text(`Review : ${mCLickedLap.review}`)
-     
     },
   });
  
@@ -34,5 +34,12 @@ $('button').click(function(){
   $('.alert').show()
 }) 
 $(".mycart").on("click",function(){
-window.location.href = '/html/mycart.html'
+  if(!mCurentuserName){//user as a gauset 
+    let result = confirm( "Please Login !" )
+    if(result) window.location.href = '/html/login.html'
+  }
+  else{
+    window.location.href = '/html/mycart.html'
+  }
+
 })

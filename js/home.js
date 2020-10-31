@@ -1,7 +1,13 @@
 
 const searchInput=document.getElementById("searchBtn");
+let mCurentuserName=localStorage.getItem("username");
 //set username using  js  from local storage
-$("#placeholder_user ").text("Hello "+localStorage.getItem("username"));
+if(localStorage.getItem("username")===null){
+  $("#placeholder_user ").text("Hello There");
+}
+else{
+  $("#placeholder_user ").text("Hello "+localStorage.getItem("username"));
+}
 $.ajax({
     method: "GET",
     url: "/js/fakeApi.txt",
@@ -35,10 +41,23 @@ $.ajax({
      console.log(details)
   }
   //search 
-  $('#searchBtn').on("keyup", function() {
+  $("#searchBtn").on("keyup", function() {
     var searchBtnValue = $(this).val().toLowerCase();
     $(".card").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(searchBtnValue) > -1) 
     });
   });
+  //open cart
+  $("#myCartBtn").on("click",function(){
+      if(!mCurentuserName){//user as a gauset 
+        let result = confirm( "Please Login" )
+        if(result) $(this).attr("href","login.html");
+      }
+      else{
+        $(this).attr("href","mycart.html")
+      }
+  })
+  //logout
+ 
+ 
   

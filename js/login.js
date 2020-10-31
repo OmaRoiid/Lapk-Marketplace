@@ -17,3 +17,6 @@ $("#loginBtn").on("click",function(){
     }
     return false;
 })
+$("#guestBtn").on("click",function(){
+    window.location.href='/html/homepage.html',true;
+})
